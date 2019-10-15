@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" media="screen" href="node_modules/bootstrap/compiler/bootstrap.css" />
+
+    <title>Sorteio</title>
+
+
+    <script>
+      /*var nomes = ['Bryant', 'Daniel', 'Guilherme', 'João', 'Fernando Gomes',
+      'Isamara', 'Jaime', 'Giovani', 'Hebert', 'Lucas', 'Valdir', 'Lucas', 'Sidney', 'Jhonatan', 'Thales'];*/
+
+      var nomes = ['Igor', 'Aldo', 'Murilo', 'Bruno', 'Lucas',
+      'Vinicius', 'Vitor', 'Giovani', 'Pedro', 'Mariana', 'Jéssica',
+      'Gabriel', 'Flávio','Eduardo','Daniel','Ivan'];
+
+      var nomesSorteio = [];
+      for (var i = 0; i < nomes.length; i++) {
+        nomesSorteio[i] = nomes[i];
+      }
+
+      var sorteados = [];
+
+      function sortear() {
+        if (nomesSorteio.length > 0) {
+          var numero = Math.floor(Math.random() * nomesSorteio.length);
+          var sorteado = nomesSorteio[numero];
+          if ( sorteados.length < 10 ) {
+            sorteados.push(nomesSorteio[numero]);
+          }
+          nomesSorteio.splice(numero, 1);
+          return sorteado;
+        } else {
+          console.log(sorteados.toString());
+          var texto = "";
+          for (var i = 0; i < sorteados.length; i++) {
+            texto = texto + "<tr><td>" + (i + 1) + "</td>" + "<td>" + sorteados[i] + "</td></tr>";
+          }
+          document.getElementById('btnResultado').className = "form-control btn-outline-success";
+          //document.getElementById('nomeSorteado').innerHTML = "<h5 class='card-title'>10 primeiros alunos sorteados:</h5>" + sorteados.join('<br />').toString();
+          document.getElementById('nomeSorteado').innerHTML = texto;
+          document.getElementById('tituloSorteado').innerHTML = "10 primeiros alunos sorteados:";
+          return 'Todos foram sorteados!';
+        }
+      }
+
+      function resetSorteio() {
+        for (var i = 0; i < nomes.length; i++) {
+          nomesSorteio[i] = nomes[i];
+        }
+        sorteados = [];
+        document.getElementById('btnResultado').className = "form-control btn-outline-primary";
+        document.getElementById('nomeSorteado').innerHTML = "";
+        document.getElementById('tituloSorteado').innerHTML = "";
+      }
+
+    </script>
+
+
+</head>
+<body class="bg-dark">
+
+  <div class="container-fluid mt-4">
+
+    <div class="card text-center bg-light border-primary w-50 mx-auto" style="height: 500px;">
+    <form>
+
+      <div class="card-header border-primary"><h5 class="card-title text-primary">Sorteio</h5></div>
+      <div class="card-body">
+        <div class="col-md-5 mb-2 mx-auto">
+            <input type="text" class="form-control btn-outline-primary" id="btnResultado" placeholder="Aluno Sorteado" disabled name="resultado" style="text-align: center;">
+        </div>
+        <input type="button" class="btn btn-primary mb-3" value="Sortear" onclick="resultado.value = sortear()">
+        <input type="button" class="btn btn-danger mb-3" value="Resetar" onclick="resetSorteio(); resultado.value = 'Resetado'">
+      </form>
+      <h5 class="card-title" id="tituloSorteado"></h5>
+      <table class="card-text mx-auto w-25" id="nomeSorteado"></table>
+    </div>
+    </div>
+  </div>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

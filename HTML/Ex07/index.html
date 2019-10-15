@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Cadastro de Moradores</title>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+  </head>
+  <body>
+
+    <form class="" action="index.html" method="post">
+      <table border="1">
+        <tr>
+          <td>Proprietário</td><td colspan="5"> <input type="text" name="inputProp" placeholder="" size="" maxlength="" required> </td>
+        </tr>
+        <tr>
+          <td>E-mail</td><td> <input type="email" name="inputMail"> </td>
+        </tr>
+        <tr>
+          <td>RG</td><td> <input type="number" name="inputRG" value=""> </td><td>CPF</td><td> <input type="number" name="inputCPF"> </td>
+        </tr>
+        <tr>
+          <td>Quadra</td><td> <input type="number" name="inputQuadra"> </td><td>Lote</td><td> <input type="text" name="inputLote"> </td><td>N°</td><td> <input type="number" name="inputNum"> </td>
+        </tr>
+        <tr>
+          <td>Quantidade de Veículos</td>
+          <td>
+            <input type="radio" name="inputVeic" value="0">0
+            <input type="radio" name="inputVeic" value="1">1
+            <input type="radio" name="inputVeic" value="2">2
+            <input type="radio" name="inputVeic" value="3">3
+            <input type="radio" name="inputVeic" value="+3">+3
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="6">Moradores</td><td>Nome</td><td>RG</td><td>Parentesco</td>
+        </tr>
+        <tr>
+          <td><input type="text" name="inputNomeP1"></td>
+          <td><input type="number" name="InputRGP1"></td>
+          <td><select name="InputParent1">
+            <option value="Pai">Pai</option>
+            <option value="Mae">Mãe</option>
+            <option value="Irmao">Irmã(o)</option>
+            <option value="Filho">Filho(a)</option>
+            <option value="Tio">Tio(a)</option>
+            <option value="Primo">Primo</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="text" name="inputNomeP2"></td>
+          <td><input type="number" name="InputRGP2"></td>
+          <td><select name="InputParent2">
+            <option value="Pai">Pai</option>
+            <option value="Mae">Mãe</option>
+            <option value="Irmao">Irmã(o)</option>
+            <option value="Filho">Filho(a)</option>
+            <option value="Tio">Tio(a)</option>
+            <option value="Primo">Primo</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="text" name="inputNomeP3"></td>
+          <td><input type="number" name="InputRGP3"></td>
+          <td><select name="InputParent3">
+            <option value="Pai">Pai</option>
+            <option value="Mae">Mãe</option>
+            <option value="Irmao">Irmã(o)</option>
+            <option value="Filho">Filho(a)</option>
+            <option value="Tio">Tio(a)</option>
+            <option value="Primo">Primo</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="text" name="inputNomeP4"></td>
+          <td><input type="number" name="InputRGP4"></td>
+          <td><select name="InputParent4">
+            <option value="Pai">Pai</option>
+            <option value="Mae">Mãe</option>
+            <option value="Irmao">Irmã(o)</option>
+            <option value="Filho">Filho(a)</option>
+            <option value="Tio">Tio(a)</option>
+            <option value="Primo">Primo</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="text" name="inputNomeP5"></td>
+          <td><input type="number" name="InputRGP5"></td>
+          <td><select name="InputParent5  ">
+            <option value="Pai">Pai</option>
+            <option value="Mae">Mãe</option>
+            <option value="Irmao">Irmã(o)</option>
+            <option value="Filho">Filho(a)</option>
+            <option value="Tio">Tio(a)</option>
+            <option value="Primo">Primo</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Autoriza Entrega</td><td><input type="checkbox" name="inputEntrega"> </td>
+        </tr>
+        <tr>
+          <td>Assinatura Jornal</td><td><input type="checkbox" name="inputJornal"> </td>
+        </tr>
+        <tr>
+          <td>Assinatura Revistas</td><td><input type="checkbox" name="inputRevista"> </td>
+        </tr>
+        <tr>
+          <td>Possui Animais</td><td><input type="checkbox" name="inputAnimal"> </td>
+        </tr>
+        <tr>
+          <td>Possui Crianças</td><td><input type="checkbox" name="inputCrianca"> </td>
+        </tr>
+        <tr>
+          <td><p>Observações</p>
+          <textarea name="textObserv" rows="8" cols="80"></textarea></td>
+        </tr>
+        <tr>
+          <td><input type="submit" value="Salvar"><input type="reset" value="Cancelar"> </td>
+        </tr>
+      </table>
+    </form>
+
+  </body>
+</html>

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1535215639 source:d:\users\bryant\core\github\fatec-lp1\estrutura de dados\ex04\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" media="screen" href="node_modules/compiler/css/bootstrap.css" />
+
+    <title>Javascript</title>
+
+    <script>
+        /*function mudarCores() {
+          document.getElementById('validationServer01').className="form-control is-valid";
+          document.getElementById('validationServer02').className="form-control is-valid";
+          document.getElementById('resultServer01').className="form-control is-valid";
+        }*/
+
+        function mudarFundo(corFundo) {
+            document.getElementById('fundoBody').style.backgroundColor=corFundo;
+        }
+
+        function mudarLetra(corLetra) {
+            document.getElementById('fundoBody').style.color=corLetra;
+        }
+
+    </script>
+
+
+</head>
+<body id="fundoBody"><center>
+
+    <div class="container-fluid">
+    <h2>What Can JavaScript Do?</h2>
+    <p>JavaScript can change HTML attribute values.</p>
+    <p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+    <button id="btnLigar" type="button" class="btn btn-success" onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+    <img id="myImage" src="pic_bulboff.gif" style="width:100px">
+    <button type="button" class="btn btn-danger" onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
+  </div>
+
+    <div class="container-fluid">
+    <form class="was-validated">
+
+          <div class="col-md-4 mb-2">
+            <label for="validationServer01">First Number</label>
+            <input type="text" class="form-control is-invalid" id="validationServer01" placeholder="First Number" required name="valor1">
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="col-md-4 mb-2">
+            <label for="validationServer02">Second number</label>
+            <input type="text" class="form-control is-invalid" id="validationServer02" placeholder="Second number" required name="valor2">
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            </div>
+            <div class="col-md-1 mb-4">
+                <label for="resultServer01">Answer</label>
+                <input type="text" class="form-control btn-outline-primary" id="resultServer01" placeholder="Answer" disabled name="resultado" style="text-align: center;">
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+            </div>
+        <input type="button" class="btn btn-primary mb-5" value="Somar" onclick="resultado.value = parseFloat(valor1.value) + parseFloat(valor2.value); mudarCores()">
+      </form>
+    </div>
+
+      <p>Cor da Página</p>
+      <div class="container-fluid">
+          <div class="btn-group btn-group-toggle mb-5" data-toggle="buttons">
+            <label class="btn btn-dark" for="inlineRadio1" onclick="mudarFundo('yellow')">Amarelo
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" autocomplete="off" value="amarelo">
+            </label>
+            <label class="btn btn-dark" for="inlineRadio2" onclick="mudarFundo('red')">Vermelho
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" autocomplete="off" value="vermelho">
+            </label>
+            <label class="btn btn-dark" for="inlineRadio3" onclick="mudarFundo('blue')">Azul
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" autocomplete="off" value="azul">
+            </label>
+            <label class="btn btn-dark active" for="inlineRadio4" onclick="mudarFundo('white')">Branco
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio4" autocomplete="off" value="branco" checked>
+            </label>
+          </div>
+        </div>
+
+        <p>Cor das Palavras</p>
+        <div class="container-fluid">
+          <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
+                <label class="btn btn-outline-warning" for="inlineRadio5" onclick="mudarLetra('green')">Verde
+                <input type="radio" name="radioCorLetra" id="inlineRadio5" autocomplete="off" value="verde">
+                </label>
+                <label class="btn btn-outline-warning active" for="inlineRadio6" onclick="mudarLetra('black')">Preto
+                <input type="radio" name="radioCorLetra" id="inlineRadio6" autocomplete="off" value="preto" checked>
+                </label>
+                <label class="btn btn-outline-warning" for="inlineRadio7" onclick="mudarLetra('pink')">Rosa
+                <input type="radio" name="radioCorLetra" id="inlineRadio7" autocomplete="off" value="rosa">
+                </label>
+                <label class="btn btn-outline-warning" for="inlineRadio8" onclick="mudarLetra('orange')">Laranja
+                <input type="radio" name="radioCorLetra" id="inlineRadio8" autocomplete="off" value="laranja">
+                </label>
+            </div>
+        </div>
+  </center>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

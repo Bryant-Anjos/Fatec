@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border: 1px solid red;
+}
+
+td {
+  border: 1px solid blue;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

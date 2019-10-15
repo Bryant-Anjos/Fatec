@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Formulários</title>
+  </head>
+  <body>
+
+    <form class="" action="index.html" method="post">
+      <p>Nome: <input type="text" name="tNome" maxlength="30" size="30"></p>
+      <p>E-mail: <input type="email" name="tMail" placeholder="Digite aqui"></p>
+      <p>Senha: <input type="password" name="tSenha"></p>
+      <p>Cargo:
+        <input type="radio" name="tCargo" value="A" checked><label for="tCargo">Administrativo</label>
+        <input type="radio" name="tCargo" value="P"><label for="tCargo">Professor</label>
+      </p>
+      <p>Curso:
+        <select name="tCurso">
+          <option value="Agro">Agronegócio</option>
+          <option value="Info">Informatica</option>
+          <option value="ADS">Análise de Sistemas</option>
+        </select>
+      </p>
+      <p>Áreas:
+        <input type="checkbox" name="op1"><label for="op1">BD</label>
+        <input type="checkbox" name="op2"><label for="op2">LP</label>
+        <input type="checkbox" name="op3"><label for="op3">ES</label>
+        <input type="checkbox" name="op4"><label for="op4">Redes</label>
+        <input type="checkbox" name="op5"><label for="op5">Outros</label>
+      </p>
+      <p>Formação:
+      <textarea name="tFormacao" rows="10" cols="20"></textarea>
+      </p>
+      <input type="submit" value="Salvar">
+      <input type="reset" value="Cancelar">
+    </form>
+
+  </body>
+</html>
