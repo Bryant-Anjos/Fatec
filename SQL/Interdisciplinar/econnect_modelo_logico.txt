@@ -1,0 +1,27 @@
+Estado (estado_id, estado_nome, estado_sigla).
+
+Cidade (cidade_id, cidade_nome, #estado_id).
+
+Cep (cep_id, cep_numero, #cidade_id).
+
+Endereco (endereco_id, logradouro, numero_endereco, #cep_id).
+
+Empresas (empresa_id, razao_social, nome_fantasia, cnpj, email, senha, tipo_empresa, #endereco_id).
+
+Telefone (telefone_id, numero_telefone, #usuario_telefone).
+
+Avaliacao_empresa (#empresa_fornecedor, #empresa_cliente, avaliacao_empresa_valor).
+
+Categorias (categoria_id, nome_categoria, #categoria_pai).
+
+Produtos (produto_id, sku, nome_produto, ean, ncm, disponibilidade, garantia, peso, volumes, estoque, cor, comprimento, altura, largura, preco, descricao, #fabricante_id, #categoria_id).
+
+Imagens (imagem_id, url_imagem, #produto_id).
+
+Atributos_personalizados (atributo_id, nome_atibuto, valor_atributo, #produto_id).
+
+Avaliacao_produto (#produto_id, #empresa_id, avaliacao_produto_valor).
+
+Pedido (pedido_id, data_pedido, preco, comentario, #cliente).
+
+Itens_Pedido (itens_id, #produto_id, qtde_produto, #pedido_id).
